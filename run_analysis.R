@@ -51,5 +51,5 @@ cleanedMeanStdData$activity <- mapvalues(factor(cleanedMeanStdData$activity), fr
 
 groupedData <- cleanedMeanStdData %>% group_by(activity, subject) %>% summarise_each(funs(mean))
 
-write.table(groupedData,file="./data/groupedDataUCI.txt", quote=FALSE)
+write.table(groupedData,file="./data/groupedDataUCI.txt", quote=FALSE, row.name=FALSE)
 
